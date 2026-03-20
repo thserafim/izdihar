@@ -1,0 +1,257 @@
+.about {
+  position: relative;
+  padding: 120px clamp(20px, 6vw, 80px);
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.about::before {
+  content: 'IZDIHAR';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(80px, 16vw, 200px);
+  font-weight: 700;
+  color: rgba(201, 169, 110, 0.03);
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+}
+
+.about-deco-line {
+  position: absolute;
+  top: 0; left: clamp(20px, 6vw, 80px);
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+
+.about-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+/* Visual side */
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-card-frame {
+  position: relative;
+}
+
+.about-img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+  filter: saturate(0.85);
+}
+
+.about-img-wrap:hover .about-img {
+  transform: scale(1.04);
+}
+
+.about-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,8,8,0.6) 0%, transparent 50%);
+}
+
+.about-quote-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  padding: 20px 24px;
+  max-width: 220px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.about-quote-icon {
+  display: block;
+  color: var(--gold);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.about-quote-badge p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.about-stats {
+  display: flex;
+  gap: 24px;
+  padding: 24px 0 0;
+}
+
+.about-stat {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+  border: 1px solid var(--gold-border);
+  background: var(--bg-card);
+}
+
+.about-stat-num {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.about-stat-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* Text side */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+.about-heading em {
+  color: var(--gold);
+}
+
+.about-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.about-divider::before,
+.about-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gold-border);
+}
+
+.divider-ornament {
+  color: var(--gold);
+  font-size: 0.6rem;
+}
+
+.about-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--text-secondary);
+}
+
+.about-body strong {
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+.about-body em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.about-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.feature-icon {
+  color: var(--gold);
+  font-size: 0.7rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.about-ceo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--gold-border);
+}
+
+.ceo-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.ceo-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.ceo-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-visual {
+    order: 2;
+  }
+  .about-card-frame {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
